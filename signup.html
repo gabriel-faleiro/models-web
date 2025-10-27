@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Minimalista</title>
+    <style>
+        /* Estilos Globais e do Corpo (Mantidos do Login) */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; 
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            min-height: 100vh; 
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Cabeçalho */
+        .header {
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+            background-color: white; 
+            border-bottom: 1px solid #ccc; 
+            margin-bottom: 0; 
+        }
+
+        .header h1 {
+            margin: 0;
+            color: #333;
+            font-size: 28px;
+            font-weight: bold; 
+        }
+
+        /* Wrapper para centralizar verticalmente o formulário de tamanho fixo */
+        .main-content {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            flex-grow: 1; /* Faz este container preencher o espaço restante */
+            width: 100%;
+            padding: 20px; 
+        }
+
+        /* Container Principal do Formulário */
+        .cadastro-container {
+            background-color: white;
+            border: 1px solid #a9a9a9; /* Borda cinza mais escura */
+            border-radius: 4px;
+            padding: 40px;
+            width: 100%;
+            max-width: 350px; /* Largura fixa */
+            height: auto; /* Altura auto-ajustável */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+        }
+
+        .cadastro-container h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+            color: #111;
+            font-weight: 400;
+            text-align: left;
+        }
+
+        /* Estilos do Formulário */
+        .cadastro-form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .cadastro-form input[type="text"],
+        .cadastro-form input[type="email"],
+        .cadastro-form input[type="tel"],
+        .cadastro-form input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box; 
+            font-size: 14px;
+        }
+
+        .cadastro-form input:focus {
+            border-color: #007185; 
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 113, 133, 0.2);
+        }
+
+        /* Estilo do Botão Amarelo */
+        .cadastro-form button {
+            background-color: #ffc220; /* Cor amarela solicitada */
+            color: #111;
+            font-weight: bold;
+            padding: 10px;
+            width: 100%;
+            border: 1px solid #ffac0e; 
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.2s;
+            margin-top: 10px;
+        }
+
+        .cadastro-form button:hover {
+            background-color: #ffb700; 
+        }
+
+        /* Link de "Já tem conta" */
+        .login-link {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        .login-link a {
+            color: #0066c0;
+            text-decoration: none;
+        }
+
+        .login-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Rodapé */
+        .footer {
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #ccc;
+            background-color: white; 
+            margin-top: auto; 
+        }
+
+        .footer-links {
+            max-width: 500px;
+            margin: 0 auto; 
+        }
+        
+        .footer a {
+            color: #0066c0;
+            margin: 0 10px;
+            text-decoration: none;
+            font-size: 12px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .footer p {
+            font-size: 11px;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>#SuaLogoAqui</h1>
+    </header>
+
+    <div class="main-content">
+        <div class="cadastro-container">
+            <h2>Crie sua Conta</h2>
+            <form class="cadastro-form">
+                
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" required>
+
+                <label for="password">Senha</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="confirm-password">Confirmar Senha</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+            
+            <div class="login-link">
+                <p>Já tem uma conta? <a href="#">Faça Login.</a></p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Condições de Uso</a>
+            <a href="#">Política de Privacidade</a>
+            <a href="#">Ajuda</a>
+            <p>&copy; 2025 Seu Nome ou Empresa</p>
+        </div>
+    </footer>
+
+</body>
+</html>
